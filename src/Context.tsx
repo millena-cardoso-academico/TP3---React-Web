@@ -9,7 +9,7 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 const AppContext = createContext(null);
 
-const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY);
+const supabase = createClient('https://qnezskkazqyaowiyaeom.supabase.co/', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFuZXpza2thenF5YW93aXlhZW9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE5Nzc1MjIsImV4cCI6MjA0NzU1MzUyMn0.qXHLSk5m11CgN3dE7hnVKNtzzLsjnvWu5ykPLB4os8w');
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const { t: translate } = useTranslation();
